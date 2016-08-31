@@ -19,7 +19,7 @@ client, _ := net.DialUDP("udp", nil, remoteAddr)
 encoder := udpkt.NewEncoder()
 
 // 待发送的数据
-message := []byte("[22/Aug/2016:17:36:58 +0800] fwf[-] network.console.ksyun.com GET /api?Action=DescribeAddressesOfBws&Service=eip&Version=2016-03-04&Region=cn-shanghai-3&BwsId=eee6fc52-586e-44bb-ba21-ac06ef08787a&_=1471858571768 HTTP/1.1 200  0.768 0.768 680 1487 http://network.console.ksyun.com/index.html Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36 10.111.17.86 80 -")
+message := []byte("[22/Aug/2016:17:36:58 +0800] fwf[-] www.xxx.com GET /api?Action=DescribeAddressesOfBws&Service=eip&Version=2016-03-04&Region=cn-shanghai-3&BwsId=eee6fc52-586e-44bb-ba21-ac06ef08787a&_=1471858571768 HTTP/1.1 200  0.768 0.768 680 1487 http://www.xxx.com/index.html Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36 10.111.17.86 80 -")
 
 // 将数据拆分成若干个分片
 udp_packets := encoder.Do(message)
